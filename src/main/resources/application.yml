@@ -6,7 +6,9 @@ spring:
 
   jpa:
     show-sql: true
-
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://mysql:3306/mysqldb
