@@ -1,10 +1,10 @@
-package io.spring.mongo.jpa.issue_demo;
+package io.spring.mongo.jpa.issue;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class IssueDemoApplicationTests {
+class IssueApplicationTests {
 
 	@Test
 	void contextLoads() {

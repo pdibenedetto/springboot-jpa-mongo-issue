@@ -1,0 +1,26 @@
+logging:
+  level:
+    root: INFO
+
+spring:
+
+  jpa:
+    show-sql: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql:3306/mysqldb
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 100
+      idle-timeout: 60000
+
+  data:
+    mongodb:
+      database: mongo
+      host: localhost
+      port: 27017
+      username: mongoDBUser
+      password: mongoDBPassword
