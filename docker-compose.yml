@@ -5,14 +5,14 @@ services:
     image: mysql:8.4.5
     command: --log-bin-trust-function-creators
     restart: unless-stopped
-    container_name: sb-db
+    container_name: mysqldb-container
     environment:
       - 'MYSQL_DATABASE=mysqldb'
       - 'MYSQL_USER=mysqlDBUser'
-      - 'MYSQL_ROOT_PASSWORD=rootpassword'
+      - 'MYSQL_ROOT_PASSWORD=rootPassword'
       - 'MYSQL_PASSWORD=mysqlDBPassword'
     ports:
-      - 3306:3306
+      - "3306:3306"
 
   mongo:
     image: mongo
@@ -22,9 +22,9 @@ services:
       MONGO_INITDB_ROOT_USERNAME: mongoDBUser
       MONGO_INITDB_ROOT_PASSWORD: mongoDBPassword
     ports:
-     - 27017:27017
-     - 27018:27018
-     - 27019:27019
+     - "27017:27017"
+     - "27018:27018"
+     - "27019:27019"
 
   express:
     image: mongo-express
@@ -37,4 +37,4 @@ services:
     depends_on:
     - mongo
     ports:
-    - 8888:8081
+    - "8888:8081"
